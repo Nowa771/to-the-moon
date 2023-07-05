@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 547293f9755c7514b8c147db6dfaebb7, type: 3}
-  m_Name: "\u30D8\u30F3\u30BF\u30A4"
+  m_Name: Porkbutts
   m_EditorClassIdentifier: 
-  stockName: "\u30D8\u30F3\u30BF\u30A4"
-  minStartPrice: 100
+  stockName: Porkbutts
+  minStartPrice: 50
   maxStartPrice: 300

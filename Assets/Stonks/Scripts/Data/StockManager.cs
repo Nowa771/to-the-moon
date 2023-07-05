@@ -31,4 +31,7 @@ public class StockSaveData
     public float currentStockPrice;
     public float lastStockMoneyChange;
     public float netCost;
+
+    
+
 }

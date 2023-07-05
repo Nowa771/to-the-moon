@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 547293f9755c7514b8c147db6dfaebb7, type: 3}
-  m_Name: Gold
+  m_Name: Zeus
   m_EditorClassIdentifier: 
-  stockName: Gold
-  minStartPrice: 40
-  maxStartPrice: 100
+  stockName: Zeus
+  minStartPrice: 100
+  maxStartPrice: 300
