@@ -48,17 +48,17 @@ public class TimerScript : MonoBehaviour
 
     private void Timer() // If timer is 0 -> set dayOver = true
     {
-        if (dayOver == false && gameStarted == true)
+        if (dayOver == false && gameStarted == true) // Day is false AND game is true
         {
             currentTime -= Time.deltaTime;
-            if (currentTime <= 0)
+            if (currentTime <= 0) // If timer is less then 0
                 dayOver = true;
         }
     }
 
     private void NextDay() // Resets dayOver back to false
     {
-        Debug.Log("Day");
+        //Debug.Log("Day: " + currentDay); // Test day counter
         dayOver = false;
     }
 
