@@ -11,7 +11,6 @@ public class RandomizerScript : MonoBehaviour
     
     
     
-    // Start is called before the first frame update
     void Start()
     {
         foreach (string symbol in stockSymbols)
