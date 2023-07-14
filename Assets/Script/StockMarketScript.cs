@@ -23,7 +23,7 @@ public class StockMarketScript : MonoBehaviour
         shopItems[2, 1] = 10;
 
         // Price to Buy/ Sell
-        shopItems[4, 1] = 10;
+        shopItems[3, 1] = 10;
 
         // Shares own
         shopItems[4, 1] = 0;
@@ -34,6 +34,7 @@ public class StockMarketScript : MonoBehaviour
     {
         //GameObject MineCoRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
         GameObject MineCoRef = GameObject.Find("StockCom");
+
 
         if (money >= shopItems[2, MineCoRef.GetComponent<MineCo>().ItemID])
         {
