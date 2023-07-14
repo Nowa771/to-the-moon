@@ -19,12 +19,11 @@ public class StockMarketScript : MonoBehaviour
         // ID's
         shopItems[1, 1] = 1;
 
-        // Price to Buy
+        // Price to Buy/ Sell
         shopItems[2, 1] = 10;
 
-
-        // Price to Sell
-        shopItems[3, 1] = 8;
+        // Price to Buy/ Sell
+        shopItems[4, 1] = 10;
 
         // Shares own
         shopItems[4, 1] = 0;
@@ -34,7 +33,7 @@ public class StockMarketScript : MonoBehaviour
     public void Buy()
     {
         //GameObject MineCoRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
-        GameObject MineCoRef = GameObject.Find("Square");
+        GameObject MineCoRef = GameObject.Find("StockCom");
 
         if (money >= shopItems[2, MineCoRef.GetComponent<MineCo>().ItemID])
         {
@@ -50,12 +49,12 @@ public class StockMarketScript : MonoBehaviour
     public void Sell()
     {
         //GameObject MineCoRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
-        GameObject MineCoRef = GameObject.Find("Square");
+        GameObject MineCoRef = GameObject.Find("StockCom");
 
         if (shopItems[4, MineCoRef.GetComponent<MineCo>().ItemID] > 0)
         {
-            money += shopItems[3, MineCoRef.GetComponent<MineCo>().ItemID];
-            shopItems[4, MineCoRef.GetComponent<MineCo>().ItemID]--;
+            money += shopItems[3, MineCoRef.GetComponent<MineCo>().ItemID]; // Adds to Balance
+            shopItems[4, MineCoRef.GetComponent<MineCo>().ItemID]--; // Deducts Share
             MoneyTxT.text = "Balance $" + money.ToString();
         }
     }
