@@ -10,7 +10,7 @@ public class StockMarketScript : MonoBehaviour
     public int[,] shopItems = new int[5, 5];
     public float money;
     public Text MoneyTxT; // Players current money
-    
+
 
     void Start()
     {
@@ -27,6 +27,7 @@ public class StockMarketScript : MonoBehaviour
 
         // Shares own
         shopItems[4, 1] = 0;
+
 
     }
 

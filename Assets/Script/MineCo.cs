@@ -18,7 +18,7 @@ public class MineCo : MonoBehaviour
     {
         
         mineCoBuyPrice.text = "$" + StockMarket.GetComponent<StockMarketScript>().shopItems[2, ItemID].ToString();
-        mineCoShareOwn.text = StockMarket.GetComponent<StockMarketScript>().shopItems[4, ItemID].ToString();
+        mineCoShareOwn.text = "Shares Own: " + StockMarket.GetComponent<StockMarketScript>().shopItems[4, ItemID].ToString();
 
     }
 }
