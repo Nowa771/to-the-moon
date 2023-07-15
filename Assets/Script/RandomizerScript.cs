@@ -1,26 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RandomizerScript : MonoBehaviour
 {
-    public string[] stockSymbols; // Add the Stock symbls
-    public float minStockPrice; // Add the minimum stock price
-    public float maxStockPrice; // Add the maximum Stock price
+    public float minPrice = 10f;
+    public float maxPrice = 100f;
+    public string[] stockSymbols;
 
-    
-    
-    
+    private Dictionary<string, float> stockPrices = new Dictionary<string, float>();
+
     void Start()
+    {
+        GenerateRandomPrices();
+    }
+
+    void GenerateRandomPrices()
     {
         foreach (string symbol in stockSymbols)
         {
-            // Generate a random stoick price between minStockPrice and maxStock price
-            float stockPrice = Random.Range(minStockPrice, maxStockPrice);
+            float randomPrice = Random.Range(minPrice, maxPrice);
+            stockPrices[symbol] = randomPrice;
+        }
+    }
 
-            Debug.Log(symbol + " " + stockPrice.ToString("C"));
+    public float GetPrice(string symbol)
+    {
+        if (stockPrices.TryGetValue(symbol, out float price))
+        {
+            return price;
         }
 
+        Debug.LogError("Stock symbol not found: " + symbol);
+        return 0f; 
     }
+
 
 }
