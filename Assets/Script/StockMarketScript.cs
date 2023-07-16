@@ -93,7 +93,7 @@ public class StockMarketScript : MonoBehaviour
 
     public void RandomMethod()
     {
-        GameObject ButtonRef = GameObject.Find("ButtonInfo");
+        GameObject ButtonRef = GameObject.Find("Buy");
         //GameObject TimerRef = GameObject.Find("TimerScript");
 
         // Changing list Value
