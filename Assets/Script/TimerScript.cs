@@ -13,7 +13,6 @@ public class TimerScript : MonoBehaviour
 
     // Reference to Randomizer Script
     public RandomizerScript randomizerScript;
-    public Text priceText;
 
     // Hidden Variables
     [HideInInspector]
@@ -32,9 +31,6 @@ public class TimerScript : MonoBehaviour
 
         // Access the price for a specific stock symbol
         float price = randomizerScript.GetPrice("MineCo");
-
-        // Update the UI Text componentwith the pice
-        priceText.text = "price for MineCo: $" + price;
     }
 
     
@@ -52,6 +48,7 @@ public class TimerScript : MonoBehaviour
             DayText.text = "Day: " + currentDay;
 
             // Calls the Randomizer Script
+
             
 
 

@@ -43,7 +43,7 @@ public class StockMarketScript : MonoBehaviour
             shopItems[4, MineCoRef.GetComponent<MineCo>().ItemID]++; // Adds share own when purchase
             MoneyTxT.text = "Balance $" + money.ToString();
             MineCoRef.GetComponent<MineCo>().mineCoShareOwn.text = shopItems[4, MineCoRef.GetComponent<MineCo>().ItemID].ToString();
-
+            radnm();
         }
 
     }
@@ -60,4 +60,14 @@ public class StockMarketScript : MonoBehaviour
             MoneyTxT.text = "Balance $" + money.ToString();
         }
     }
+
+    public void radnm()
+    {
+        GameObject MineCoRef = GameObject.Find("StockCom");
+
+        // Changing list Value
+        shopItems[2, MineCoRef.GetComponent<MineCo>().ItemID] = 2 * shopItems[2, MineCoRef.GetComponent<MineCo>().ItemID];
+        Debug.Log(shopItems[2, MineCoRef.GetComponent<MineCo>().ItemID]); // Purhcase History console
+    }
+
 }

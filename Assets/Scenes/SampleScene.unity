@@ -520,6 +520,8 @@ GameObject:
   m_Component:
   - component: {fileID: 359515425}
   - component: {fileID: 359515424}
+  - component: {fileID: 359515427}
+  - component: {fileID: 359515426}
   m_Layer: 0
   m_Name: StockMarket
   m_TagString: Untagged
@@ -556,6 +558,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &359515426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359515423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45be481b6b0a9b94c8681c0710f6f44b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minPrice: 10
+  maxPrice: 100
+  stockSymbols: []
+  stockMarketScript: {fileID: 359515424}
+--- !u!114 &359515427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359515423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b33b682ac8bc6b248896461c07d5fad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dayLength: 2
+  DayText: {fileID: 1570099005}
+  randomizerScript: {fileID: 359515426}
+  gameStarted: 0
+  dayOver: 0
+  currentTime: 0
+  currentMoney: 0
+  currentDay: 0
 --- !u!1 &407282265
 GameObject:
   m_ObjectHideFlags: 0
@@ -4211,8 +4249,6 @@ GameObject:
   - component: {fileID: 1570099003}
   - component: {fileID: 1570099006}
   - component: {fileID: 1570099005}
-  - component: {fileID: 1570099007}
-  - component: {fileID: 1570099008}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -4282,42 +4318,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1570099002}
   m_CullTransparentMesh: 1
---- !u!114 &1570099007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1570099002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b33b682ac8bc6b248896461c07d5fad1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dayLength: 2
-  DayText: {fileID: 1570099005}
-  randomizerScript: {fileID: 1570099008}
-  priceText: {fileID: 0}
-  gameStarted: 0
-  dayOver: 0
-  currentTime: 0
-  currentMoney: 0
-  currentDay: 0
---- !u!114 &1570099008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1570099002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45be481b6b0a9b94c8681c0710f6f44b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minPrice: 10
-  maxPrice: 100
-  stockSymbols: []
 --- !u!1 &1784803796
 GameObject:
   m_ObjectHideFlags: 0

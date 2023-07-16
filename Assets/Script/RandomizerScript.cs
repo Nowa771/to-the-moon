@@ -9,7 +9,15 @@ public class RandomizerScript : MonoBehaviour
     public float maxPrice = 100f;
     public string[] stockSymbols;
 
+
+    // Reference to Script
+    public StockMarketScript stockMarketScript;
+
+
+
     private Dictionary<string, float> stockPrices = new Dictionary<string, float>();
+
+    
 
     void Start()
     {
@@ -23,6 +31,13 @@ public class RandomizerScript : MonoBehaviour
             float randomPrice = Random.Range(minPrice, maxPrice);
             stockPrices[symbol] = randomPrice;
         }
+
+        GameObject MineCoRef = GameObject.Find("StockCom");
+
+        // Changing list Value
+        //shopItems[2, MineCoRef.GetComponent<MineCo>().ItemID] = 2 * shopItems[2, MineCoRef.GetComponent<MineCo>().ItemID];
+        //Debug.Log(shopItems[2, MineCoRef.GetComponent<MineCo>().ItemID]); // Purhcase History console
+
     }
 
     public float GetPrice(string symbol)
