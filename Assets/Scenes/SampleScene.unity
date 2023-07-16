@@ -455,7 +455,7 @@ GameObject:
   - component: {fileID: 239804801}
   m_Layer: 0
   m_Name: EventSystem
-  m_TagString: Event
+  m_TagString: Needed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -520,11 +520,10 @@ GameObject:
   m_Component:
   - component: {fileID: 359515425}
   - component: {fileID: 359515424}
-  - component: {fileID: 359515427}
   - component: {fileID: 359515426}
   m_Layer: 0
   m_Name: StockMarket
-  m_TagString: Untagged
+  m_TagString: TimeChange
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -541,8 +540,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4140f8d99d4e434895c065ca3c1d357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 1000
+  money: 100000
   MoneyTxT: {fileID: 1495653701}
+  minPrice: -10
+  maxPrice: 10
+  RadNum: 1
+  RadValue: 0
 --- !u!4 &359515425
 Transform:
   m_ObjectHideFlags: 0
@@ -567,28 +570,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 359515423}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45be481b6b0a9b94c8681c0710f6f44b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minPrice: 10
-  maxPrice: 100
-  stockSymbols: []
-  stockMarketScript: {fileID: 359515424}
---- !u!114 &359515427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 359515423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b33b682ac8bc6b248896461c07d5fad1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dayLength: 2
   DayText: {fileID: 1570099005}
-  randomizerScript: {fileID: 359515426}
   gameStarted: 0
   dayOver: 0
   currentTime: 0
@@ -963,9 +949,10 @@ GameObject:
   - component: {fileID: 486370602}
   - component: {fileID: 486370601}
   - component: {fileID: 486370600}
+  - component: {fileID: 486370603}
   m_Layer: 5
   m_Name: Buy
-  m_TagString: Event
+  m_TagString: Needed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1085,6 +1072,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486370598}
   m_CullTransparentMesh: 1
+--- !u!114 &486370603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486370598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db718562819f54b4bac2bb37188f814a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemID: 1
+  BuyPrice: {fileID: 632020290}
+  SellPrice: {fileID: 632020290}
+  ShareOwn: {fileID: 1563448010}
+  StockMarket: {fileID: 359515423}
 --- !u!1 &492759500
 GameObject:
   m_ObjectHideFlags: 0
@@ -1396,10 +1400,9 @@ GameObject:
   - component: {fileID: 546293517}
   - component: {fileID: 546293516}
   - component: {fileID: 546293515}
-  - component: {fileID: 546293518}
   m_Layer: 0
-  m_Name: StockCom
-  m_TagString: Event
+  m_Name: MineCo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1519,23 +1522,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &546293518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 546293513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db718562819f54b4bac2bb37188f814a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ItemID: 1
-  mineCoBuyPrice: {fileID: 632020290}
-  mineCoSellPrice: {fileID: 632020290}
-  mineCoShareOwn: {fileID: 1563448010}
-  StockMarket: {fileID: 359515423}
 --- !u!1 &595625646
 GameObject:
   m_ObjectHideFlags: 0
@@ -1550,7 +1536,7 @@ GameObject:
   - component: {fileID: 595625648}
   m_Layer: 5
   m_Name: Sell
-  m_TagString: Event
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1706,7 +1692,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.7129195, y: -0.050229073}
-  m_SizeDelta: {x: 100, y: 50}
+  m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &632020290
 MonoBehaviour:
@@ -2111,7 +2097,7 @@ GameObject:
   - component: {fileID: 787367982}
   - component: {fileID: 787367981}
   m_Layer: 5
-  m_Name: MineCo Title (1)
+  m_Name: StudioCo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2157,7 +2143,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MineCo
+  m_text: StudioCo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2995,7 +2981,7 @@ GameObject:
   - component: {fileID: 1307244309}
   - component: {fileID: 1307244308}
   m_Layer: 0
-  m_Name: StockCom (1)
+  m_Name: StudioCo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3281,7 +3267,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.7129195, y: -0.04022801}
-  m_SizeDelta: {x: 100, y: 50}
+  m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1317708436
 MonoBehaviour:
@@ -4113,8 +4099,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 519.4208, y: 319.9}
-  m_SizeDelta: {x: 340.8415, y: 63.795}
+  m_AnchoredPosition: {x: 675, y: 445}
+  m_SizeDelta: {x: 485.8713, y: 63.795}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1495653700
 CanvasRenderer:
@@ -4273,8 +4259,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 255.05249, y: 118.59534}
-  m_SizeDelta: {x: 270.1047, y: 150.8094}
+  m_AnchoredPosition: {x: 0, y: 445}
+  m_SizeDelta: {x: 270.1047, y: 74.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1570099005
 MonoBehaviour:
@@ -4410,6 +4396,7 @@ GameObject:
   - component: {fileID: 1895085793}
   - component: {fileID: 1895085792}
   - component: {fileID: 1895085791}
+  - component: {fileID: 1895085794}
   m_Layer: 5
   m_Name: Buy (1)
   m_TagString: Untagged
@@ -4532,6 +4519,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895085789}
   m_CullTransparentMesh: 1
+--- !u!114 &1895085794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895085789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db718562819f54b4bac2bb37188f814a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemID: 2
+  BuyPrice: {fileID: 1317708436}
+  SellPrice: {fileID: 1317708436}
+  ShareOwn: {fileID: 1784803798}
+  StockMarket: {fileID: 359515423}
 --- !u!1 &1895652929
 GameObject:
   m_ObjectHideFlags: 0

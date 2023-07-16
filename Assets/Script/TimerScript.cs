@@ -11,8 +11,8 @@ public class TimerScript : MonoBehaviour
 
 
 
-    // Reference to Randomizer Script
-    public RandomizerScript randomizerScript;
+    // Reference to StockMarketScript
+    StockMarketScript stockMarketScript;
 
     // Hidden Variables
     [HideInInspector]
@@ -29,14 +29,14 @@ public class TimerScript : MonoBehaviour
         gameStarted = true;
         dayOver = false;
 
-        // Access the price for a specific stock symbol
-        float price = randomizerScript.GetPrice("MineCo");
+        stockMarketScript = GameObject.FindGameObjectWithTag("TimeChange").GetComponent<StockMarketScript>(); // Calling from script
     }
 
     
     void Update()
     {
         NewDate(); // Day Counter
+        
     }
 
     private void NewDate()
@@ -47,9 +47,8 @@ public class TimerScript : MonoBehaviour
             currentDay++;
             DayText.text = "Day: " + currentDay;
 
-            // Calls the Randomizer Script
+        
 
-            
 
 
             NextDay();
@@ -64,6 +63,7 @@ public class TimerScript : MonoBehaviour
             currentTime -= Time.deltaTime;
             if (currentTime <= 0) // If timer is less then 0
                 dayOver = true;
+
         }
     }
 
@@ -71,6 +71,12 @@ public class TimerScript : MonoBehaviour
     {
         //Debug.Log("Day: " + currentDay); // Test day counter
         dayOver = false;
+
+
+        
+        // Calls the Randomizer function
+        stockMarketScript.RandomMethod(); // Call RandomMethod function
+        
     }
 
 }
