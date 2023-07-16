@@ -543,9 +543,10 @@ MonoBehaviour:
   money: 100000
   MoneyTxT: {fileID: 1495653701}
   minPrice: -10
-  maxPrice: 10
+  maxPrice: 15
   RadNum: 1
   RadValue: 0
+  undervalue: 0
 --- !u!4 &359515425
 Transform:
   m_ObjectHideFlags: 0

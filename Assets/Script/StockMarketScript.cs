@@ -16,6 +16,7 @@ public class StockMarketScript : MonoBehaviour
     public int maxPrice = 10;
     public int RadNum = 1;
     public int RadValue = 0;
+    public int undervalue = 0;
 
 
     void Start()
@@ -52,6 +53,18 @@ public class StockMarketScript : MonoBehaviour
 
 
     }
+
+    public void Update()
+    {
+        GameObject ButtonRef = GameObject.Find("Buy");
+
+        if ((shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]) < 2)
+        {
+            undervalueMethod();
+            (shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]) = undervalue + (shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]);
+        }
+    }
+
 
     public void Buy()
     {
@@ -103,6 +116,12 @@ public class StockMarketScript : MonoBehaviour
         shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID] += RadValue / 10;
 
 
+    }
+
+    public void undervalueMethod()
+    {
+        undervalue = Random.Range(1, 10);
+        Debug.Log("Under Value number: " + undervalue);
     }
 
 }
