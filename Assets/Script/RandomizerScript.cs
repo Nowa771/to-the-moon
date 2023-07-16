@@ -10,6 +10,7 @@ public class RandomizerScript : MonoBehaviour
     public string[] stockSymbols;
 
 
+    
     // Reference to Script
     public StockMarketScript stockMarketScript;
 
@@ -24,7 +25,7 @@ public class RandomizerScript : MonoBehaviour
         GenerateRandomPrices();
     }
 
-    void GenerateRandomPrices()
+    public void GenerateRandomPrices()
     {
         foreach (string symbol in stockSymbols)
         {
@@ -32,15 +33,23 @@ public class RandomizerScript : MonoBehaviour
             stockPrices[symbol] = randomPrice;
         }
 
-        GameObject MineCoRef = GameObject.Find("StockCom");
+
+
 
         // Changing list Value
-        //shopItems[2, MineCoRef.GetComponent<MineCo>().ItemID] = 2 * shopItems[2, MineCoRef.GetComponent<MineCo>().ItemID];
-        //Debug.Log(shopItems[2, MineCoRef.GetComponent<MineCo>().ItemID]); // Purhcase History console
+        GameObject shopObjectRef = GameObject.Find("StockMarketScript");
+
+        // NEEDS FIXING
+        //stockMarketScript.shopItems[2, shopObjectRef.GetComponent<MineCo>().ItemID] = 2 * stockMarketScript.shopItems[2, shopObjectRef.GetComponent<MineCo>().ItemID];
+
+
+
+        // Purhcase History console
+        //Debug.Log(stockMarketScript.shopItems[2, shopObjectRef.GetComponent<MineCo>().ItemID]);
 
     }
 
-    public float GetPrice(string symbol)
+    public float GenerateRandomPrices(string symbol)
     {
         if (stockPrices.TryGetValue(symbol, out float price))
         {
@@ -48,7 +57,7 @@ public class RandomizerScript : MonoBehaviour
         }
 
         Debug.LogError("Stock symbol not found: " + symbol);
-        return 0f; 
+        return 0f;
     }
 
 
