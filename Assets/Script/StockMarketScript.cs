@@ -10,6 +10,7 @@ public class StockMarketScript : MonoBehaviour
     public int[,] shopItems = new int[10, 10];
     public float money;
     public Text MoneyTxT; // Players current money
+    public Text PurchaseTxT; // Prints player purchase history
 
 
     public int minPrice = -10;
@@ -29,6 +30,7 @@ public class StockMarketScript : MonoBehaviour
         shopItems[1, 3] = 3;
         shopItems[1, 4] = 4;
         shopItems[1, 5] = 5;
+        shopItems[1, 6] = 6;
 
         // Price to Buy/ Sell
         shopItems[2, 1] = 10;
@@ -36,6 +38,7 @@ public class StockMarketScript : MonoBehaviour
         shopItems[2, 3] = 50;
         shopItems[2, 4] = 35;
         shopItems[2, 5] = 220;
+        shopItems[2, 6] = 342;
 
         // Price to Buy/ Sell
         shopItems[3, 1] = 10;
@@ -43,6 +46,7 @@ public class StockMarketScript : MonoBehaviour
         shopItems[3, 3] = 50;
         shopItems[3, 4] = 35;
         shopItems[3, 5] = 220;
+        shopItems[3, 6] = 342;
 
         // Shares own
         shopItems[4, 1] = 0;
@@ -50,6 +54,7 @@ public class StockMarketScript : MonoBehaviour
         shopItems[4, 3] = 0;
         shopItems[4, 4] = 0;
         shopItems[4, 5] = 0;
+        shopItems[4, 6] = 220;
 
 
     }
@@ -80,10 +85,11 @@ public class StockMarketScript : MonoBehaviour
             }
             money -= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]; // Deduct balance
             shopItems[4, ButtonRef.GetComponent<ButtonInfo>().ItemID]++; // Adds share own when purchase
-            MoneyTxT.text = "Balance $" + money.ToString();
+            MoneyTxT.text = "Balance $" + money.ToString(); // Update text Balance
             ButtonRef.GetComponent<ButtonInfo>().ShareOwn.text = shopItems[4, ButtonRef.GetComponent<ButtonInfo>().ItemID].ToString();
 
-            Debug.Log("Bought for: " + shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]); // Purhacse History
+            PurchaseTxT.text = "Bought for: " + shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]; // Purchase Historu in text
+            Debug.Log("Bought for: " + shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]); // Purhacse History in console
             
         }
 
@@ -98,9 +104,10 @@ public class StockMarketScript : MonoBehaviour
         {
             money += shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID]; // Adds to Balance
             shopItems[4, ButtonRef.GetComponent<ButtonInfo>().ItemID]--; // Deducts Share
-            MoneyTxT.text = "Balance $" + money.ToString();
+            MoneyTxT.text = "Balance $" + money.ToString(); // Update text Balance
 
-            Debug.Log("Sold for: " + shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]); // Purchase History
+            PurchaseTxT.text = "Sold for: " + shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]; // Selling History in text
+            Debug.Log("Sold for: " + shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]); // Selling History in console
         }
     }
 
@@ -113,7 +120,9 @@ public class StockMarketScript : MonoBehaviour
         RadNum = Random.Range(minPrice, maxPrice);
         Debug.Log("Random Number: " + RadNum);
         RadValue = RadNum * shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID];
-        shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID] += RadValue / 10;
+        shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]  += RadValue / 10;
+
+        shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID] = shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID];
 
 
     }
