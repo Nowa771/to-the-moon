@@ -54,7 +54,7 @@ public class StockMarketScript : MonoBehaviour
         shopItems[4, 3] = 0;
         shopItems[4, 4] = 0;
         shopItems[4, 5] = 0;
-        shopItems[4, 6] = 220;
+        shopItems[4, 6] = 0;
 
 
     }
