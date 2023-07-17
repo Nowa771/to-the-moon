@@ -74,6 +74,7 @@ public class StockMarketScript : MonoBehaviour
     public void Buy()
     {
         //GameObject ButtonRef = GameObject.FindGameObjectWithTag("Needed").GetComponent<EventSystem>().currentSelectedGameObject;
+        AudioManager.instance.PlayAudioClip(AudioManager.instance.uiClickSound);
         GameObject ButtonRef = GameObject.Find("Buy");
         
 
@@ -98,6 +99,7 @@ public class StockMarketScript : MonoBehaviour
     public void Sell()
     {
         //GameObject ButtonRef = GameObject.FindGameObjectWithTag("Needed").GetComponent<EventSystem>().currentSelectedGameObject;
+        AudioManager.instance.PlayAudioClip(AudioManager.instance.uiClickSound);
         GameObject ButtonRef = GameObject.Find("Buy");
 
         if (shopItems[4, ButtonRef.GetComponent<ButtonInfo>().ItemID] > 0)
