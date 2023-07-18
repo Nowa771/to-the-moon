@@ -14,6 +14,15 @@ public class TimerScript : MonoBehaviour
     // Reference to StockMarketScript
     StockMarketScript stockMarketScript;
 
+
+    [Header("Transcript List")]
+    public TransScript transScript1;
+    public TransScript transScript2;
+    public TransScript transScript3;
+    public TransScript transScript4;
+    public TransScript transScript5;
+    public TransScript transScript6;
+
     // Hidden Variables
     [HideInInspector]
     public bool gameStarted, dayOver;
@@ -75,8 +84,13 @@ public class TimerScript : MonoBehaviour
 
         
         // Calls the Randomizer function
-        stockMarketScript.RandomMethod(); // Call RandomMethod function
-        
+        transScript1.RandomMethod(); // Call RandomMethod function
+        transScript2.RandomMethod(); // Call RandomMethod function
+        transScript3.RandomMethod(); // Call RandomMethod function
+        transScript4.RandomMethod(); // Call RandomMethod function
+        transScript5.RandomMethod(); // Call RandomMethod function
+        transScript6.RandomMethod(); // Call RandomMethod function
+
     }
 
 }

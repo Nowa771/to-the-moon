@@ -852,14 +852,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4140f8d99d4e434895c065ca3c1d357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 1000000
+  money: 100
   MoneyTxT: {fileID: 1495653701}
   PurchaseTxT: {fileID: 428842758}
-  minPrice: -10
-  maxPrice: 15
-  RadNum: 1
-  RadValue: 0
-  undervalue: 0
 --- !u!4 &359515425
 Transform:
   m_ObjectHideFlags: 0
@@ -889,6 +884,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dayLength: 2.5
   DayText: {fileID: 1570099005}
+  transScript1: {fileID: 546293518}
+  transScript2: {fileID: 1307244311}
+  transScript3: {fileID: 1331288064}
+  transScript4: {fileID: 2081503547}
+  transScript5: {fileID: 1304697228}
+  transScript6: {fileID: 1308709946}
   gameStarted: 0
   dayOver: 0
   currentTime: 0
@@ -2261,8 +2262,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stockMarketScript: {fileID: 359515424}
+  timerScript: {fileID: 359515426}
   price: 10
   stockOwn: 0
+  minPrice: -10
+  maxPrice: 10
+  RadNum: 1
+  RadValue: 0
+  undervalue: 0
   BuyText: {fileID: 632020290}
   StockOwnText: {fileID: 1563448010}
   PurchaseHistoryText: {fileID: 428842758}
@@ -4276,8 +4283,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stockMarketScript: {fileID: 359515424}
-  price: 220
+  timerScript: {fileID: 359515426}
+  price: 560
   stockOwn: 0
+  minPrice: -10
+  maxPrice: 45
+  RadNum: 1
+  RadValue: 0
+  undervalue: 0
   BuyText: {fileID: 105187853}
   StockOwnText: {fileID: 698729046}
   PurchaseHistoryText: {fileID: 428842758}
@@ -4430,8 +4443,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stockMarketScript: {fileID: 359515424}
+  timerScript: {fileID: 359515426}
   price: 5
   stockOwn: 0
+  minPrice: -10
+  maxPrice: 20
+  RadNum: 1
+  RadValue: 0
+  undervalue: 0
   BuyText: {fileID: 1317708436}
   StockOwnText: {fileID: 1784803798}
   PurchaseHistoryText: {fileID: 428842758}
@@ -4584,8 +4603,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stockMarketScript: {fileID: 359515424}
-  price: 342
+  timerScript: {fileID: 359515426}
+  price: 420
   stockOwn: 0
+  minPrice: -15
+  maxPrice: 15
+  RadNum: 1
+  RadValue: 0
+  undervalue: 0
   BuyText: {fileID: 1493610852}
   StockOwnText: {fileID: 1432714077}
   PurchaseHistoryText: {fileID: 428842758}
@@ -4949,8 +4974,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stockMarketScript: {fileID: 359515424}
-  price: 50
+  timerScript: {fileID: 359515426}
+  price: 69
   stockOwn: 0
+  minPrice: -20
+  maxPrice: 35
+  RadNum: 1
+  RadValue: 0
+  undervalue: 0
   BuyText: {fileID: 63385686}
   StockOwnText: {fileID: 492759502}
   PurchaseHistoryText: {fileID: 428842758}
@@ -7756,8 +7787,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stockMarketScript: {fileID: 359515424}
+  timerScript: {fileID: 359515426}
   price: 35
   stockOwn: 0
+  minPrice: -15
+  maxPrice: 15
+  RadNum: 1
+  RadValue: 0
+  undervalue: 0
   BuyText: {fileID: 930990209}
   StockOwnText: {fileID: 692089183}
   PurchaseHistoryText: {fileID: 428842758}

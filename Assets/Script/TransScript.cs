@@ -6,10 +6,17 @@ using UnityEngine.UI;
 public class TransScript : MonoBehaviour
 {
     public StockMarketScript stockMarketScript;
+    public TimerScript timerScript;
 
     [Header("Stock Value")]
     public int price;
     public int stockOwn;
+
+    public int minPrice = -10;
+    public int maxPrice = 10;
+    public int RadNum = 1;
+    public int RadValue = 0;
+    public int undervalue = 0;
 
     [Header("Texts")]
     public Text BuyText; // Stock Price
@@ -22,13 +29,25 @@ public class TransScript : MonoBehaviour
 
     void Start()
     {
-        BuyText.text = price.ToString();
+        //BuyText.text = price.ToString();
         //StockOwnText.text = "Shares Own: " + stockOwn.ToString();
     }
 
     void Update()
     {
         StockOwnText.text = "Shares Own: " + stockOwn.ToString(); // Update Text
+
+        if (price <= 1)
+        {
+            price = 3;
+            undervalueMethod();
+
+            price = price + undervalue;
+        }
+
+        //RandomUpdate();
+        BuyText.text = "$" + price.ToString();
+
     }
 
 
@@ -38,9 +57,9 @@ public class TransScript : MonoBehaviour
 
         if (stockMarketScript.money >= price)
         {
-            if (stockMarketScript.RadValue == 0)
+            if (RadValue == 0)
             {
-                stockMarketScript.RadValue += Random.Range(stockMarketScript.minPrice, stockMarketScript.maxPrice);
+                RadValue += Random.Range(minPrice, maxPrice);
             }
 
             stockMarketScript.money -= price; // Deduct balance
@@ -72,4 +91,21 @@ public class TransScript : MonoBehaviour
 
     }
 
+    public void RandomMethod()
+    {
+
+        //Changing list Value
+        RadNum = Random.Range(minPrice, maxPrice);
+        Debug.Log("Random Number: " + RadNum);
+        RadValue = RadNum * price;
+        price += RadValue / 10;
+
+    }
+
+    public void undervalueMethod()
+    {
+
+        undervalue = Random.Range(1, 10);
+        Debug.Log("Under Value number: " + undervalue);
+    }
 }
