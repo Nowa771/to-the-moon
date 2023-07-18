@@ -56,61 +56,17 @@ public class StockMarketScript : MonoBehaviour
         shopItems[4, 5] = 0;
         shopItems[4, 6] = 0;
 
-
     }
 
-    public void Update()
+    void Update()
     {
-        GameObject ButtonRef = GameObject.Find("Buy");
+        //GameObject ButtonRef = GameObject.Find("Buy");
 
-        if ((shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]) < 2)
-        {
-            undervalueMethod();
-            (shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]) = undervalue + (shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]);
-        }
-    }
-
-
-    public void Buy()
-    {
-        //GameObject ButtonRef = GameObject.FindGameObjectWithTag("Needed").GetComponent<EventSystem>().currentSelectedGameObject;
-        AudioManager.instance.PlayAudioClip(AudioManager.instance.uiClickSound);
-        GameObject ButtonRef = GameObject.Find("Buy");
-        
-
-        if (money >= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID])
-        {
-            if (RadValue == 0)
-            {
-                RadValue += Random.Range(minPrice, maxPrice);
-            }
-            money -= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]; // Deduct balance
-            shopItems[4, ButtonRef.GetComponent<ButtonInfo>().ItemID]++; // Adds share own when purchase
-            MoneyTxT.text = "Balance $" + money.ToString(); // Update text Balance
-            ButtonRef.GetComponent<ButtonInfo>().ShareOwn.text = shopItems[4, ButtonRef.GetComponent<ButtonInfo>().ItemID].ToString();
-
-            PurchaseTxT.text = "Bought for: " + shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]; // Purchase Historu in text
-            Debug.Log("Bought for: " + shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]); // Purhacse History in console
-            
-        }
-
-    }
-    
-    public void Sell()
-    {
-        //GameObject ButtonRef = GameObject.FindGameObjectWithTag("Needed").GetComponent<EventSystem>().currentSelectedGameObject;
-        AudioManager.instance.PlayAudioClip(AudioManager.instance.uiClickSound);
-        GameObject ButtonRef = GameObject.Find("Buy");
-
-        if (shopItems[4, ButtonRef.GetComponent<ButtonInfo>().ItemID] > 0)
-        {
-            money += shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID]; // Adds to Balance
-            shopItems[4, ButtonRef.GetComponent<ButtonInfo>().ItemID]--; // Deducts Share
-            MoneyTxT.text = "Balance $" + money.ToString(); // Update text Balance
-
-            PurchaseTxT.text = "Sold for: " + shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]; // Selling History in text
-            Debug.Log("Sold for: " + shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]); // Selling History in console
-        }
+        //if ((shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]) < 2)
+        //{
+        //    undervalueMethod();
+        //    (shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]) = undervalue + (shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]);
+        //}
     }
 
     public void RandomMethod()
@@ -119,12 +75,12 @@ public class StockMarketScript : MonoBehaviour
         //GameObject TimerRef = GameObject.Find("TimerScript");
 
         // Changing list Value
-        RadNum = Random.Range(minPrice, maxPrice);
-        Debug.Log("Random Number: " + RadNum);
-        RadValue = RadNum * shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID];
-        shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]  += RadValue / 10;
+        //RadNum = Random.Range(minPrice, maxPrice);
+        //Debug.Log("Random Number: " + RadNum);
+        //RadValue = RadNum * shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID];
+        //shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]  += RadValue / 10;
 
-        shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID] = shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID];
+        //shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID] = shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID];
 
 
     }
@@ -135,4 +91,48 @@ public class StockMarketScript : MonoBehaviour
         Debug.Log("Under Value number: " + undervalue);
     }
 
+
+    //public void Buy()
+    //{
+    //    //GameObject ButtonRef = GameObject.FindGameObjectWithTag("Needed").GetComponent<EventSystem>().currentSelectedGameObject;
+    //    AudioManager.instance.PlayAudioClip(AudioManager.instance.uiClickSound);
+    //    GameObject ButtonRef = GameObject.Find("Buy");
+
+
+    //    if (money >= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID])
+    //    {
+    //        if (RadValue == 0)
+    //        {
+    //            RadValue += Random.Range(minPrice, maxPrice);
+    //        }
+
+    //        money -= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]; // Deduct balance
+    //        shopItems[4, ButtonRef.GetComponent<ButtonInfo>().ItemID]++; // Adds share own when purchase
+    //        MoneyTxT.text = "Balance $" + money.ToString(); // Update text Balance
+    //        ButtonRef.GetComponent<ButtonInfo>().ShareOwn.text = shopItems[4, ButtonRef.GetComponent<ButtonInfo>().ItemID].ToString();
+
+    //        PurchaseTxT.text = "Bought for: " + shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]; // Purchase Historu in text
+    //        Debug.Log(shopItems[1, ButtonRef.GetComponent<ButtonInfo>().ItemID] + " Transaction Purchase");
+    //        Debug.Log("Bought for: " + shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]); // Purhacse History in console
+
+    //    }
+
+    //}
+
+    //public void Sell()
+    //{
+    //    //GameObject ButtonRef = GameObject.FindGameObjectWithTag("Needed").GetComponent<EventSystem>().currentSelectedGameObject;
+    //    AudioManager.instance.PlayAudioClip(AudioManager.instance.uiClickSound);
+    //    GameObject ButtonRef = GameObject.Find("Buy");
+
+    //    if (shopItems[4, ButtonRef.GetComponent<ButtonInfo>().ItemID] > 0)
+    //    {
+    //        money += shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID]; // Adds to Balance
+    //        shopItems[4, ButtonRef.GetComponent<ButtonInfo>().ItemID]--; // Deducts Share
+    //        MoneyTxT.text = "Balance $" + money.ToString(); // Update text Balance
+
+    //        PurchaseTxT.text = "Sold for: " + shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]; // Selling History in text
+    //        Debug.Log("Sold for: " + shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]); // Selling History in console
+    //    }
+    //}
 }

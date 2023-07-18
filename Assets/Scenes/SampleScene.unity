@@ -540,7 +540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 139662486}
   - component: {fileID: 139662489}
-  - component: {fileID: 139662488}
+  - component: {fileID: 139662490}
   m_Layer: 5
   m_Name: MineCo Title
   m_TagString: Untagged
@@ -568,7 +568,15 @@ RectTransform:
   m_AnchoredPosition: {x: -1.85, y: 0.01}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &139662488
+--- !u!222 &139662489
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139662485}
+  m_CullTransparentMesh: 1
+--- !u!114 &139662490
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -577,7 +585,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 139662485}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -588,83 +596,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MineCo
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 42
-  m_fontSizeBase: 42
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &139662489
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 139662485}
-  m_CullTransparentMesh: 1
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 42
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 46
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: MineCo
 --- !u!1 &178414699
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,7 +852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4140f8d99d4e434895c065ca3c1d357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 100
+  money: 1000000
   MoneyTxT: {fileID: 1495653701}
   PurchaseTxT: {fileID: 428842758}
   minPrice: -10
@@ -1208,8 +1153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 700.99, y: -398.76898}
-  m_SizeDelta: {x: 357.98, y: 129.172}
+  m_AnchoredPosition: {x: 589.58997, y: -398.76898}
+  m_SizeDelta: {x: 580.7802, y: 129.172}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &428842758
 MonoBehaviour:
@@ -1233,10 +1178,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 3
     m_MaxSize: 141
     m_Alignment: 6
     m_AlignByGeometry: 0
@@ -1266,7 +1211,7 @@ GameObject:
   - component: {fileID: 436717854}
   - component: {fileID: 436717853}
   m_Layer: 5
-  m_Name: Sell (1)
+  m_Name: Sell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1337,9 +1282,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 359515424}
-        m_TargetAssemblyTypeName: StockMarketScript, Assembly-CSharp
-        m_MethodName: Sell
+      - m_Target: {fileID: 1307244311}
+        m_TargetAssemblyTypeName: TransScript, Assembly-CSharp
+        m_MethodName: SellStock
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1471,9 +1416,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 359515424}
-        m_TargetAssemblyTypeName: StockMarketScript, Assembly-CSharp
-        m_MethodName: Sell
+      - m_Target: {fileID: 1308709946}
+        m_TargetAssemblyTypeName: TransScript, Assembly-CSharp
+        m_MethodName: SellStock
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1613,7 +1558,6 @@ GameObject:
   - component: {fileID: 480137568}
   - component: {fileID: 480137567}
   - component: {fileID: 480137566}
-  - component: {fileID: 480137569}
   m_Layer: 5
   m_Name: Buy (3)
   m_TagString: Untagged
@@ -1686,9 +1630,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 359515424}
-        m_TargetAssemblyTypeName: StockMarketScript, Assembly-CSharp
-        m_MethodName: Buy
+      - m_Target: {fileID: 2081503547}
+        m_TargetAssemblyTypeName: TransScript, Assembly-CSharp
+        m_MethodName: BuyStock
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1736,23 +1680,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480137564}
   m_CullTransparentMesh: 1
---- !u!114 &480137569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 480137564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db718562819f54b4bac2bb37188f814a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ItemID: 4
-  BuyPrice: {fileID: 930990209}
-  SellPrice: {fileID: 930990209}
-  ShareOwn: {fileID: 692089183}
-  StockMarket: {fileID: 359515423}
 --- !u!1 &486370598
 GameObject:
   m_ObjectHideFlags: 0
@@ -1765,7 +1692,6 @@ GameObject:
   - component: {fileID: 486370602}
   - component: {fileID: 486370601}
   - component: {fileID: 486370600}
-  - component: {fileID: 486370603}
   m_Layer: 5
   m_Name: Buy
   m_TagString: Needed
@@ -1838,9 +1764,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 359515424}
-        m_TargetAssemblyTypeName: StockMarketScript, Assembly-CSharp
-        m_MethodName: Buy
+      - m_Target: {fileID: 546293518}
+        m_TargetAssemblyTypeName: TransScript, Assembly-CSharp
+        m_MethodName: BuyStock
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1888,23 +1814,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486370598}
   m_CullTransparentMesh: 1
---- !u!114 &486370603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486370598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db718562819f54b4bac2bb37188f814a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ItemID: 1
-  BuyPrice: {fileID: 632020290}
-  SellPrice: {fileID: 632020290}
-  ShareOwn: {fileID: 1563448010}
-  StockMarket: {fileID: 359515423}
 --- !u!1 &492759500
 GameObject:
   m_ObjectHideFlags: 0
@@ -2216,6 +2125,7 @@ GameObject:
   - component: {fileID: 546293517}
   - component: {fileID: 546293516}
   - component: {fileID: 546293515}
+  - component: {fileID: 546293518}
   m_Layer: 0
   m_Name: MineCo
   m_TagString: Untagged
@@ -2338,6 +2248,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &546293518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546293513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ebc522de9f497a41abf4544c38c4bce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stockMarketScript: {fileID: 359515424}
+  price: 10
+  stockOwn: 0
+  BuyText: {fileID: 632020290}
+  StockOwnText: {fileID: 1563448010}
+  PurchaseHistoryText: {fileID: 428842758}
+  PurchaseStockNameText: {fileID: 139662490}
 --- !u!1 &595625646
 GameObject:
   m_ObjectHideFlags: 0
@@ -2422,9 +2351,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 359515424}
-        m_TargetAssemblyTypeName: StockMarketScript, Assembly-CSharp
-        m_MethodName: Sell
+      - m_Target: {fileID: 546293518}
+        m_TargetAssemblyTypeName: TransScript, Assembly-CSharp
+        m_MethodName: SellStock
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2859,7 +2788,6 @@ GameObject:
   - component: {fileID: 725937159}
   - component: {fileID: 725937158}
   - component: {fileID: 725937157}
-  - component: {fileID: 725937160}
   m_Layer: 5
   m_Name: Buy (2)
   m_TagString: Untagged
@@ -2932,9 +2860,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 359515424}
-        m_TargetAssemblyTypeName: StockMarketScript, Assembly-CSharp
-        m_MethodName: Buy
+      - m_Target: {fileID: 1331288064}
+        m_TargetAssemblyTypeName: TransScript, Assembly-CSharp
+        m_MethodName: BuyStock
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2982,23 +2910,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 725937155}
   m_CullTransparentMesh: 1
---- !u!114 &725937160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 725937155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db718562819f54b4bac2bb37188f814a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ItemID: 3
-  BuyPrice: {fileID: 63385686}
-  SellPrice: {fileID: 63385686}
-  ShareOwn: {fileID: 492759502}
-  StockMarket: {fileID: 359515423}
 --- !u!1 &787367979
 GameObject:
   m_ObjectHideFlags: 0
@@ -3009,7 +2920,7 @@ GameObject:
   m_Component:
   - component: {fileID: 787367980}
   - component: {fileID: 787367982}
-  - component: {fileID: 787367981}
+  - component: {fileID: 787367983}
   m_Layer: 5
   m_Name: StudioCo
   m_TagString: Untagged
@@ -3037,7 +2948,15 @@ RectTransform:
   m_AnchoredPosition: {x: -1.85, y: 0.02}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &787367981
+--- !u!222 &787367982
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787367979}
+  m_CullTransparentMesh: 1
+--- !u!114 &787367983
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3046,7 +2965,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 787367979}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -3057,83 +2976,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: StudioFX
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 42
-  m_fontSizeBase: 42
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &787367982
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787367979}
-  m_CullTransparentMesh: 1
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 42
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 42
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: StudioFX
 --- !u!1 &803312183
 GameObject:
   m_ObjectHideFlags: 0
@@ -3682,7 +3538,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1006032521}
   - component: {fileID: 1006032523}
-  - component: {fileID: 1006032522}
+  - component: {fileID: 1006032524}
   m_Layer: 5
   m_Name: NoSleepCo
   m_TagString: Untagged
@@ -3710,7 +3566,15 @@ RectTransform:
   m_AnchoredPosition: {x: -1.85, y: 0.010227561}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1006032522
+--- !u!222 &1006032523
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006032520}
+  m_CullTransparentMesh: 1
+--- !u!114 &1006032524
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3719,7 +3583,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1006032520}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -3730,83 +3594,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: NoSleepCo
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 37
-  m_fontSizeBase: 37
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1006032523
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1006032520}
-  m_CullTransparentMesh: 1
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 36
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 41
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: NoSleepCo
 --- !u!1 &1103781392
 GameObject:
   m_ObjectHideFlags: 0
@@ -4164,9 +3965,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 359515424}
-        m_TargetAssemblyTypeName: StockMarketScript, Assembly-CSharp
-        m_MethodName: Sell
+      - m_Target: {fileID: 2081503547}
+        m_TargetAssemblyTypeName: TransScript, Assembly-CSharp
+        m_MethodName: SellStock
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4257,7 +4058,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1278122090}
   - component: {fileID: 1278122092}
-  - component: {fileID: 1278122091}
+  - component: {fileID: 1278122093}
   m_Layer: 5
   m_Name: WhaleCo
   m_TagString: Untagged
@@ -4285,7 +4086,15 @@ RectTransform:
   m_AnchoredPosition: {x: -1.85, y: 0.039999396}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1278122091
+--- !u!222 &1278122092
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278122089}
+  m_CullTransparentMesh: 1
+--- !u!114 &1278122093
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4294,7 +4103,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1278122089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -4305,83 +4114,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Whales
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 42
-  m_fontSizeBase: 42
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1278122092
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1278122089}
-  m_CullTransparentMesh: 1
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 42
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 42
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: WhaleCo
 --- !u!1 &1304697223
 GameObject:
   m_ObjectHideFlags: 0
@@ -4394,6 +4140,7 @@ GameObject:
   - component: {fileID: 1304697227}
   - component: {fileID: 1304697226}
   - component: {fileID: 1304697225}
+  - component: {fileID: 1304697228}
   m_Layer: 0
   m_Name: WhaleCo
   m_TagString: Untagged
@@ -4516,6 +4263,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1304697228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304697223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ebc522de9f497a41abf4544c38c4bce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stockMarketScript: {fileID: 359515424}
+  price: 220
+  stockOwn: 0
+  BuyText: {fileID: 105187853}
+  StockOwnText: {fileID: 698729046}
+  PurchaseHistoryText: {fileID: 428842758}
+  PurchaseStockNameText: {fileID: 1278122093}
 --- !u!1 &1307244306
 GameObject:
   m_ObjectHideFlags: 0
@@ -4528,6 +4294,7 @@ GameObject:
   - component: {fileID: 1307244310}
   - component: {fileID: 1307244309}
   - component: {fileID: 1307244308}
+  - component: {fileID: 1307244311}
   m_Layer: 0
   m_Name: StudioCo
   m_TagString: Untagged
@@ -4650,6 +4417,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1307244311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307244306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ebc522de9f497a41abf4544c38c4bce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stockMarketScript: {fileID: 359515424}
+  price: 5
+  stockOwn: 0
+  BuyText: {fileID: 1317708436}
+  StockOwnText: {fileID: 1784803798}
+  PurchaseHistoryText: {fileID: 428842758}
+  PurchaseStockNameText: {fileID: 787367983}
 --- !u!1 &1308709941
 GameObject:
   m_ObjectHideFlags: 0
@@ -4662,6 +4448,7 @@ GameObject:
   - component: {fileID: 1308709945}
   - component: {fileID: 1308709944}
   - component: {fileID: 1308709943}
+  - component: {fileID: 1308709946}
   m_Layer: 0
   m_Name: GameAwards
   m_TagString: Untagged
@@ -4784,6 +4571,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1308709946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308709941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ebc522de9f497a41abf4544c38c4bce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stockMarketScript: {fileID: 359515424}
+  price: 342
+  stockOwn: 0
+  BuyText: {fileID: 1493610852}
+  StockOwnText: {fileID: 1432714077}
+  PurchaseHistoryText: {fileID: 428842758}
+  PurchaseStockNameText: {fileID: 1347726163}
 --- !u!1 &1317708434
 GameObject:
   m_ObjectHideFlags: 0
@@ -4796,7 +4602,7 @@ GameObject:
   - component: {fileID: 1317708437}
   - component: {fileID: 1317708436}
   m_Layer: 5
-  m_Name: Price (1)
+  m_Name: Price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5007,6 +4813,7 @@ GameObject:
   - component: {fileID: 1331288063}
   - component: {fileID: 1331288062}
   - component: {fileID: 1331288061}
+  - component: {fileID: 1331288064}
   m_Layer: 0
   m_Name: VineCo
   m_TagString: Untagged
@@ -5129,6 +4936,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1331288064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331288059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ebc522de9f497a41abf4544c38c4bce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stockMarketScript: {fileID: 359515424}
+  price: 50
+  stockOwn: 0
+  BuyText: {fileID: 63385686}
+  StockOwnText: {fileID: 492759502}
+  PurchaseHistoryText: {fileID: 428842758}
+  PurchaseStockNameText: {fileID: 2085982528}
 --- !u!1 &1347726159
 GameObject:
   m_ObjectHideFlags: 0
@@ -5139,7 +4965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1347726160}
   - component: {fileID: 1347726162}
-  - component: {fileID: 1347726161}
+  - component: {fileID: 1347726163}
   m_Layer: 5
   m_Name: MineCo Title (5)
   m_TagString: Untagged
@@ -5167,7 +4993,15 @@ RectTransform:
   m_AnchoredPosition: {x: -1.85, y: 0.03999967}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1347726161
+--- !u!222 &1347726162
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347726159}
+  m_CullTransparentMesh: 1
+--- !u!114 &1347726163
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5176,7 +5010,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1347726159}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -5187,83 +5021,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GameAwards
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 32.4
-  m_fontSizeBase: 32.4
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1347726162
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1347726159}
-  m_CullTransparentMesh: 1
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 33
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 44
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: GameAwards
 --- !u!1 &1413833191
 GameObject:
   m_ObjectHideFlags: 0
@@ -6371,9 +6142,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 359515424}
-        m_TargetAssemblyTypeName: StockMarketScript, Assembly-CSharp
-        m_MethodName: Sell
+      - m_Target: {fileID: 1304697228}
+        m_TargetAssemblyTypeName: TransScript, Assembly-CSharp
+        m_MethodName: SellStock
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6433,7 +6204,7 @@ GameObject:
   - component: {fileID: 1784803799}
   - component: {fileID: 1784803798}
   m_Layer: 5
-  m_Name: Shares Own (1)
+  m_Name: Shares Own
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6641,7 +6412,6 @@ GameObject:
   - component: {fileID: 1879189054}
   - component: {fileID: 1879189053}
   - component: {fileID: 1879189052}
-  - component: {fileID: 1879189055}
   m_Layer: 5
   m_Name: Buy (4)
   m_TagString: Untagged
@@ -6714,9 +6484,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 359515424}
-        m_TargetAssemblyTypeName: StockMarketScript, Assembly-CSharp
-        m_MethodName: Buy
+      - m_Target: {fileID: 1304697228}
+        m_TargetAssemblyTypeName: TransScript, Assembly-CSharp
+        m_MethodName: BuyStock
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6764,23 +6534,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879189050}
   m_CullTransparentMesh: 1
---- !u!114 &1879189055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1879189050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db718562819f54b4bac2bb37188f814a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ItemID: 5
-  BuyPrice: {fileID: 105187853}
-  SellPrice: {fileID: 105187853}
-  ShareOwn: {fileID: 698729046}
-  StockMarket: {fileID: 359515423}
 --- !u!1 &1895085789
 GameObject:
   m_ObjectHideFlags: 0
@@ -6793,10 +6546,9 @@ GameObject:
   - component: {fileID: 1895085793}
   - component: {fileID: 1895085792}
   - component: {fileID: 1895085791}
-  - component: {fileID: 1895085794}
   m_Layer: 5
-  m_Name: Buy (1)
-  m_TagString: Untagged
+  m_Name: Buy
+  m_TagString: Needed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6866,9 +6618,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 359515424}
-        m_TargetAssemblyTypeName: StockMarketScript, Assembly-CSharp
-        m_MethodName: Buy
+      - m_Target: {fileID: 1307244311}
+        m_TargetAssemblyTypeName: TransScript, Assembly-CSharp
+        m_MethodName: BuyStock
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6916,23 +6668,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895085789}
   m_CullTransparentMesh: 1
---- !u!114 &1895085794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1895085789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db718562819f54b4bac2bb37188f814a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ItemID: 2
-  BuyPrice: {fileID: 1317708436}
-  SellPrice: {fileID: 1317708436}
-  ShareOwn: {fileID: 1784803798}
-  StockMarket: {fileID: 359515423}
 --- !u!1 &1895652929
 GameObject:
   m_ObjectHideFlags: 0
@@ -7350,7 +7085,6 @@ GameObject:
   - component: {fileID: 1983262596}
   - component: {fileID: 1983262595}
   - component: {fileID: 1983262594}
-  - component: {fileID: 1983262597}
   m_Layer: 5
   m_Name: Buy (5)
   m_TagString: Untagged
@@ -7423,9 +7157,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 359515424}
-        m_TargetAssemblyTypeName: StockMarketScript, Assembly-CSharp
-        m_MethodName: Buy
+      - m_Target: {fileID: 1308709946}
+        m_TargetAssemblyTypeName: TransScript, Assembly-CSharp
+        m_MethodName: BuyStock
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7473,23 +7207,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1983262592}
   m_CullTransparentMesh: 1
---- !u!114 &1983262597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1983262592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db718562819f54b4bac2bb37188f814a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ItemID: 6
-  BuyPrice: {fileID: 1493610852}
-  SellPrice: {fileID: 1493610852}
-  ShareOwn: {fileID: 1432714077}
-  StockMarket: {fileID: 359515423}
 --- !u!1 &1992635846
 GameObject:
   m_ObjectHideFlags: 0
@@ -7903,6 +7620,7 @@ GameObject:
   - component: {fileID: 2081503546}
   - component: {fileID: 2081503545}
   - component: {fileID: 2081503544}
+  - component: {fileID: 2081503547}
   m_Layer: 0
   m_Name: NoSleepCo
   m_TagString: Untagged
@@ -8025,6 +7743,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2081503547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081503542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ebc522de9f497a41abf4544c38c4bce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stockMarketScript: {fileID: 359515424}
+  price: 35
+  stockOwn: 0
+  BuyText: {fileID: 930990209}
+  StockOwnText: {fileID: 692089183}
+  PurchaseHistoryText: {fileID: 428842758}
+  PurchaseStockNameText: {fileID: 1006032524}
 --- !u!1 &2085982524
 GameObject:
   m_ObjectHideFlags: 0
@@ -8035,7 +7772,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2085982525}
   - component: {fileID: 2085982527}
-  - component: {fileID: 2085982526}
+  - component: {fileID: 2085982528}
   m_Layer: 5
   m_Name: VineCo
   m_TagString: Untagged
@@ -8063,7 +7800,15 @@ RectTransform:
   m_AnchoredPosition: {x: -1.85, y: 0.009999055}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2085982526
+--- !u!222 &2085982527
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085982524}
+  m_CullTransparentMesh: 1
+--- !u!114 &2085982528
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8072,7 +7817,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2085982524}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -8083,83 +7828,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: VineCo
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 42
-  m_fontSizeBase: 42
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &2085982527
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2085982524}
-  m_CullTransparentMesh: 1
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 42
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 42
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: VinesCo
 --- !u!1 &2146184558
 GameObject:
   m_ObjectHideFlags: 0
@@ -8244,9 +7926,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 359515424}
-        m_TargetAssemblyTypeName: StockMarketScript, Assembly-CSharp
-        m_MethodName: Sell
+      - m_Target: {fileID: 1331288064}
+        m_TargetAssemblyTypeName: TransScript, Assembly-CSharp
+        m_MethodName: SellStock
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
