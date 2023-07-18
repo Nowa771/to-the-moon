@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class PauseButtonScript : MonoBehaviour
 {
     public TimerScript timerScript; //assign a reference to the TimerScript component
+    public Text pauseSymbolText; // to show it the time is paused
     private bool isPaused; // keep track of the current pause state.
 
     private void Start()
@@ -19,10 +20,12 @@ public class PauseButtonScript : MonoBehaviour
         if (isPaused)
         {
             Time.timeScale = 0f;
+            pauseSymbolText.text = "||"; // Set the text to the pause symbol
         }
         else
         {
             Time.timeScale = 1f;
+            pauseSymbolText.text = ""; // Clear the text
         }
         timerScript.gameStarted = !isPaused;
     }
