@@ -14,6 +14,7 @@ public class FastForwardX2ButtonScript : MonoBehaviour
 
     private void FastForward()
     {
+        AudioManager.instance.PlayAudioClip(AudioManager.instance.uiClickSound);
         if (Time.timeScale == 1f) // Normal speed
         {
             Time.timeScale = fastForwardSpeed;

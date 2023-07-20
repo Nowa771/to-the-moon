@@ -17,6 +17,7 @@ public class AudioManager : MonoBehaviour
 
     //Variables
     private int currentSoundTrack;
+    private bool isMusicMuted = false;
 
     private void Awake()
     {
@@ -44,4 +45,12 @@ public class AudioManager : MonoBehaviour
         yield return new WaitUntil(() => musicSource.isPlaying == false);
         StartCoroutine(PlayMusic());
     }
+
+    // To mute/unmute the the Music
+    public void ToggleMusicMute()
+    {
+        isMusicMuted = !isMusicMuted;
+        musicSource.mute = isMusicMuted;
+    }
+
 }
