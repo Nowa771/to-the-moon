@@ -8,6 +8,7 @@ public class TransScript : MonoBehaviour
     public StockMarketScript stockMarketScript;
     public TimerScript timerScript;
 
+
     [Header("Stock Value")]
     public int price;
     public int stockOwn;
@@ -23,7 +24,6 @@ public class TransScript : MonoBehaviour
     public Text StockOwnText; // How much stock own
     public Text PurchaseHistoryText; // Prints player purchase history
     public Text PurchaseStockNameText; // Name of Stock
-
 
 
 
@@ -66,7 +66,7 @@ public class TransScript : MonoBehaviour
             stockOwn++; // Adds share own when purchase
             stockMarketScript.MoneyTxT.text = "Balance $" + stockMarketScript.money.ToString(); // Update text Balance
 
-            PurchaseHistoryText.text = "Bought for: " + price + " from " + PurchaseStockNameText; // Purchase History in text
+            PurchaseHistoryText.text = PurchaseStockNameText.text + " share bought for: " + price; // Purchase History in text
             Debug.Log("Bought for: " + price); // Purhacse History in console
 
         }
@@ -84,7 +84,7 @@ public class TransScript : MonoBehaviour
             stockOwn--; // Deduct share own when purchase
             stockMarketScript.MoneyTxT.text = "Balance $" + stockMarketScript.money.ToString(); // Update text Balance
 
-            PurchaseHistoryText.text = "Sold for: " + price + " from " + PurchaseStockNameText; // Purchase Historu in text
+            PurchaseHistoryText.text = PurchaseStockNameText.text + " share sold for: " + price; // Purchase Historu in text
             Debug.Log("Sold for: " + price); // Purhacse History in console
 
         }
@@ -108,4 +108,5 @@ public class TransScript : MonoBehaviour
         undervalue = Random.Range(1, 10);
         Debug.Log("Under Value number: " + undervalue);
     }
+
 }
