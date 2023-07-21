@@ -19,10 +19,15 @@ public class TransScript : MonoBehaviour
     public int RadValue = 0;
     public int undervalue = 0;
 
+    public int total = 0; // Buy all 
+    public int totalsold = 0; // Sold all
+
+
     [Header("Texts")]
     public Text BuyText; // Stock Price
     public Text StockOwnText; // How much stock own
-    public Text PurchaseHistoryText; // Prints player purchase history
+    public Text PurchaseBuyHistoryText; // Prints player buy history
+    public Text PurchaseSellHistoryText; // Prints player sell history
     public Text PurchaseStockNameText; // Name of Stock
 
 
@@ -37,7 +42,7 @@ public class TransScript : MonoBehaviour
     {
         StockOwnText.text = "Shares Own: " + stockOwn.ToString(); // Update Text
 
-        if (price <= 1)
+        if (price <= 0)
         {
             price = 3;
             undervalueMethod();
@@ -57,20 +62,31 @@ public class TransScript : MonoBehaviour
 
         if (stockMarketScript.money >= price)
         {
-            if (RadValue == 0)
-            {
-                RadValue += Random.Range(minPrice, maxPrice);
-            }
 
             stockMarketScript.money -= price; // Deduct balance
             stockOwn++; // Adds share own when purchase
             stockMarketScript.MoneyTxT.text = "Balance $" + stockMarketScript.money.ToString(); // Update text Balance
 
-            PurchaseHistoryText.text = PurchaseStockNameText.text + " share bought for: " + price; // Purchase History in text
+            PurchaseBuyHistoryText.text = PurchaseStockNameText.text + " share bought for: " + price; // Purchase History in text
             Debug.Log("Bought for: " + price); // Purhacse History in console
 
         }
 
+    }
+    public void BuyStockAll()
+    {
+        AudioManager.instance.PlayAudioClip(AudioManager.instance.uiClickSound);
+        while (stockMarketScript.money >= price)
+        {
+            stockMarketScript.money -= price; // Deduct balance
+            stockOwn++; // Adds share own when purchase
+            stockMarketScript.MoneyTxT.text = "Balance $" + stockMarketScript.money.ToString(); // Update text Balance
+            total += price;
+        }
+        PurchaseBuyHistoryText.text = PurchaseStockNameText.text + " share bought for: " + total; // Purchase History in text
+        Debug.Log("Bought for: " + total); // Purhacse History in console
+
+        total = 0;
     }
 
     public void SellStock()
@@ -80,13 +96,31 @@ public class TransScript : MonoBehaviour
         if (stockOwn > 0)
         {
 
-            stockMarketScript.money += price; // Deduct balance
+            stockMarketScript.money += price; // Adds balance
             stockOwn--; // Deduct share own when purchase
             stockMarketScript.MoneyTxT.text = "Balance $" + stockMarketScript.money.ToString(); // Update text Balance
 
-            PurchaseHistoryText.text = PurchaseStockNameText.text + " share sold for: " + price; // Purchase Historu in text
+            PurchaseSellHistoryText.text = PurchaseStockNameText.text + " share sold for: " + price; // Purchase Historu in text
             Debug.Log("Sold for: " + price); // Purhacse History in console
 
+        }
+
+    }
+
+    public void SellStockAll()
+    {
+        AudioManager.instance.PlayAudioClip(AudioManager.instance.uiClickSound);
+
+        if (stockOwn > 0)
+        {
+            totalsold = price * stockOwn; // Sells everyting then adds to balance
+            stockMarketScript.money += totalsold;
+            stockMarketScript.MoneyTxT.text = "Balance $" + stockMarketScript.money.ToString(); // Update text Balance
+
+            PurchaseSellHistoryText.text = PurchaseStockNameText.text + " share sold for: " + price * stockOwn; // Purchase History in text
+            Debug.Log("Sold for: " + price * stockOwn); // Purhacse History in console
+
+            stockOwn = 0; // stockOwn set to 0
         }
 
     }
