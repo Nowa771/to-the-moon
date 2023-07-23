@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ButtonInfo : MonoBehaviour
 {
+    // SCRIPT NO LONGER IN USE
 
     [Header("Depth")]
     public int ItemID;

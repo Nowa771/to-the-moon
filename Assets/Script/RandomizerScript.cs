@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class RandomizerScript : MonoBehaviour
 {
+    // SCRIPT NO LONGER IN USE
+
+
     public float minPrice = 10f;
     public float maxPrice = 100f;
     public string[] stockSymbols;
